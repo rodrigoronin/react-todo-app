@@ -37,8 +37,8 @@ const TaskList = () => {
     <div className={style.container}>
       <AddTask />
       <div>
-        {tasks.map((task) => (
-          <Card>
+        {tasks.map((task, i) => (
+          <Card key={`${task.title}-${i}`}>
             <Checkbox completed={task.completed} />
             <span className={`${style.title} ${task.completed && style.completed} text-preset-1`}>
               {task.title}
