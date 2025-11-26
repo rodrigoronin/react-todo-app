@@ -1,0 +1,85 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+* VARIABLES
+*/
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+
+  --purple-100: #3e34f1;
+  --purple-300: #c8cbe7;
+  --purple-600: #5b5e7e;
+  --purple-700: #4d5067;
+  --purple-800: #393a4b;
+
+  --gray-50: #fafafa;
+  --gray-300: #d1d2da;
+  --gray-600: #9495a5;
+
+  --navy-850: #494c6b;
+  --navy-900: #25273d;
+  --navy-950: #171823;
+
+  --blue-500: #3a7cfd;
+
+  --gradient-1: linear-gradient(165deg, #55ddff 0%, #c058f3 100%);
+  --gradient-2: linear-gradient(165deg, #3710bd 0%, #a42395 100%);
+
+  --spacing-0: 0rem;
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+
+  --font-size-1: 1.125rem;
+  --font-size-2: 0.875rem;
+  --font-size-3: 0.75rem;
+  --font-regular: 400;
+  --font-bold: 700;
+  --font-line-height: 1;
+  --font-letter-spacing: -0.25px;
+}
+
+/**
+* CSS CLASS PRESETS
+*/
+
+.text-preset-1 {
+  font-size: var(--font-size-1);
+  font-weight: var(--font-regular);
+  line-height: var(--font-line-height);
+  letter-spacing: var(--font-letter-spacing);
+}
+
+.text-preset-2 {
+  font-size: var(--font-size-2);
+  font-weight: var(--font-bold);
+  line-height: var(--font-line-height);
+  letter-spacing: var(--font-letter-spacing);
+}
+
+.text-preset-3 {
+  font-size: var(--font-size-2);
+  font-weight: var(--font-regular);
+  line-height: var(--font-line-height);
+  letter-spacing: var(--font-letter-spacing);
+}
+
+.text-preset-4 {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-regular);
+  line-height: var(--font-line-height);
+  letter-spacing: var(--font-letter-spacing);
+}

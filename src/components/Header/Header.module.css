@@ -1,0 +1,7 @@
+.header {
+  min-width: 540px;
+  height: 300px;
+  color: var(--color-white);
+  background: var(--gradient-1);
+  border-radius: 5px;
+}
