@@ -32,7 +32,7 @@ const tasks: Task[] = [
   },
 ];
 
-const Input = () => {
+const TaskList = () => {
   return (
     <div className={style.container}>
       <AddTask />
@@ -50,4 +50,4 @@ const Input = () => {
   );
 };
 
-export default Input;
+export default TaskList;

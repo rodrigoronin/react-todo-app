@@ -3,7 +3,7 @@ import Checkbox from "../Checkbox/Checkbox";
 
 import style from "./AddTask.module.css";
 
-const Input = () => {
+const AddTask = () => {
   return (
     <Card>
       <Checkbox />
@@ -17,4 +17,4 @@ const Input = () => {
   );
 };
 
-export default Input;
+export default AddTask;
