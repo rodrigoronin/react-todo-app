@@ -1,0 +1,6 @@
+.checkbox {
+  width: var(--spacing-300);
+  height: var(--spacing-300);
+  border-radius: 50%;
+  border: 1px solid var(--purple-300);
+}

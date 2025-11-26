@@ -1,11 +1,12 @@
 import Card from "../Card/Card";
+import Checkbox from "../Checkbox/Checkbox";
 
 import style from "./AddTask.module.css";
 
 const Input = () => {
   return (
     <Card>
-      <span className={style.checkbox}></span>
+      <Checkbox />
       <input
         className={`${style.input} text-preset-1`}
         id="input"

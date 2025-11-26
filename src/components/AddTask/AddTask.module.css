@@ -9,13 +9,6 @@
   box-shadow: 0 35px 50px -15px rgba(25, 25, 25, 0.5);
 }
 
-.checkbox {
-  width: var(--spacing-300);
-  height: var(--spacing-300);
-  border-radius: 50%;
-  border: 1px solid var(--purple-300);
-}
-
 .input {
   border: none;
   outline: none;
