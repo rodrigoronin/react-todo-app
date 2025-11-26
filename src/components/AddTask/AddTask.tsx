@@ -1,8 +1,10 @@
-import style from "./Input.module.css";
+import Card from "../Card/Card";
+
+import style from "./AddTask.module.css";
 
 const Input = () => {
   return (
-    <div className={style.container}>
+    <Card>
       <span className={style.checkbox}></span>
       <input
         className={`${style.input} text-preset-1`}
@@ -10,7 +12,7 @@ const Input = () => {
         type="text"
         placeholder="Create a new todo..."
       />
-    </div>
+    </Card>
   );
 };
 

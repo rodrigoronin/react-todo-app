@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header";
-import Input from "./components/Input/Input";
+import AddTask from "./components/AddTask/AddTask";
 
 import style from "./App.module.css";
 
@@ -9,7 +9,7 @@ function App() {
       <Header />
 
       <div className={style.container}>
-        <Input />
+        <AddTask />
       </div>
     </>
   );
