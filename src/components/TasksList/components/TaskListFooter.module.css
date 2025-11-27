@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--gray-600);
+  gap: 1em;
+}
+
+.container > * {
+  flex: 1 1 0;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+
+.clear-tasks {
+  text-align: right;
+}
