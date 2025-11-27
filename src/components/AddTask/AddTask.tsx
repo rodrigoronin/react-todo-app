@@ -15,6 +15,8 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
+    if (!title.trim()) return;
+
     const id = crypto.randomUUID();
 
     onAddTask({
@@ -28,7 +30,7 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
 
   return (
     <Card>
-      <form className={style.container} onSubmit={(e: FormEvent) => handleSubmit(e)}>
+      <form className={style.container} onSubmit={handleSubmit}>
         <Checkbox />
         <input
           className={`${style.input} text-preset-1`}

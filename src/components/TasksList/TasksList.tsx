@@ -14,7 +14,7 @@ const TaskList = () => {
   }
 
   function onAddTask(task: Task): void {
-    setTasks([...tasks, task]);
+    setTasks((prev) => [...prev, task]);
   }
 
   return (
