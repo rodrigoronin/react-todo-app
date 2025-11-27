@@ -65,14 +65,14 @@ body {
 
 .text-preset-2 {
   font-size: var(--font-size-2);
-  font-weight: var(--font-bold);
+  font-weight: var(--font-regular);
   line-height: var(--font-line-height);
   letter-spacing: var(--font-letter-spacing);
 }
 
 .text-preset-3 {
   font-size: var(--font-size-2);
-  font-weight: var(--font-regular);
+  font-weight: var(--font-bold);
   line-height: var(--font-line-height);
   letter-spacing: var(--font-letter-spacing);
 }

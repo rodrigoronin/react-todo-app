@@ -3,6 +3,7 @@ import AddTask from "../AddTask/AddTask";
 import Card from "../Card/Card";
 import Checkbox from "../Checkbox/Checkbox";
 import TaskItem from "../TaskItem/TaskItem";
+import TaskListFooter from "./components/TaskListFooter";
 
 import type { Task } from "../../types/task";
 import style from "./TasksList.module.css";
@@ -32,9 +33,13 @@ const TaskList = () => {
     {
       id: "5",
       title: "Play some games",
-      completed: false,
+      completed: true,
     },
   ]);
+
+  function getRemainingTasks(): number {
+    return tasks.filter((task) => !task.completed).length;
+  }
 
   return (
     <div className={style.container}>
@@ -43,6 +48,7 @@ const TaskList = () => {
         {tasks.map((task, i) => (
           <TaskItem key={`${task.title}-${i}`} task={task} />
         ))}
+        <TaskListFooter tasksRemaining={getRemainingTasks} />
       </div>
     </div>
   );
