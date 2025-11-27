@@ -3,10 +3,7 @@
   align-items: center;
   justify-content: left;
   gap: var(--spacing-300);
-  padding: var(--spacing-300);
-  border-radius: 5px;
-  background: var(--color-white);
-  box-shadow: 0 35px 50px -15px rgba(25, 25, 25, 0.5);
+  background: transparent;
 }
 
 .input {
