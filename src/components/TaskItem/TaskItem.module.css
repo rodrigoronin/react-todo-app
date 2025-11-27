@@ -1,0 +1,8 @@
+.title {
+  color: var(--navy-850);
+}
+
+.completed {
+  color: var(--gray-300);
+  text-decoration: line-through;
+}

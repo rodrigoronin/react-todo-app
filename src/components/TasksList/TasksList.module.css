@@ -3,12 +3,3 @@
   flex-direction: column;
   gap: var(--spacing-300);
 }
-
-.title {
-  color: var(--navy-850);
-}
-
-.completed {
-  color: var(--gray-300);
-  text-decoration: line-through;
-}
