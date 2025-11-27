@@ -43,10 +43,10 @@ const TaskList = () => {
     <div className={style.container}>
       <AddTask />
       <div>
-        {tasks.map((task, i) => (
-          <TaskItem key={`${task.title}-${i}`} task={task} />
+        {tasks.map((task) => (
+          <TaskItem key={task.id} task={task} />
         ))}
-        <TaskListFooter tasksRemaining={getRemainingTasks} />
+        <TaskListFooter tasksRemaining={getRemainingTasks()} />
       </div>
     </div>
   );

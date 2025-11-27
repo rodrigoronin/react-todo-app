@@ -3,7 +3,7 @@ import Card from "../../Card/Card";
 import style from "./TaskListFooter.module.css";
 
 interface FooterProps {
-  tasksRemaining: () => number;
+  tasksRemaining: number;
 }
 
 const TaskListFooter = ({ tasksRemaining }: FooterProps) => {
@@ -12,7 +12,7 @@ const TaskListFooter = ({ tasksRemaining }: FooterProps) => {
       <div className={style.container}>
         <span
           className={`${style["remaining-tasks"]} text-preset-2`}
-        >{`${tasksRemaining()} items left`}</span>
+        >{`${tasksRemaining} items left`}</span>
         <div className={style.filter}>
           <button type="button" className={`${style.button} text-preset-3`}>
             All
