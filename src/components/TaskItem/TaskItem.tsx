@@ -6,15 +6,18 @@ import style from "./TaskItem.module.css";
 
 interface TaskItemProps {
   task: Task;
+  onToggle: (id: string) => void;
+  onDelete: (id: string) => void;
 }
 
-const TaskItem = ({ task }: TaskItemProps) => {
+const TaskItem = ({ task, onToggle, onDelete }: TaskItemProps) => {
   return (
     <Card>
-      <Checkbox completed={task.completed} />
+      <Checkbox completed={task.completed} id={task.id} onToggle={onToggle} />
       <span className={`${style.title} ${task.completed && style.completed} text-preset-1`}>
         {task.title}
       </span>
+      <span className={style.delete}>X</span>
     </Card>
   );
 };
