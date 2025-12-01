@@ -33,7 +33,7 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
       <form className={style.container} onSubmit={handleSubmit}>
         <span
           className={`${style.checkbox} ${completed && style.completed}`}
-          onClick={() => setCompleted(true)}
+          onClick={() => setCompleted((prev) => !prev)}
         ></span>
         <input
           className={`${style.input} text-preset-1`}
