@@ -8,40 +8,54 @@ interface AddTaskProps {
   onAddTask: (task: Task) => void;
 }
 
+interface IState {
+  title: string;
+  completed: boolean;
+}
+
 const AddTask = ({ onAddTask }: AddTaskProps) => {
-  const [title, setTitle] = useState<string>("");
-  const [completed, setCompleted] = useState<boolean>(false);
+  const [newTask, setNewTask] = useState<IState>({
+    title: "",
+    completed: false,
+  });
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    if (!title.trim()) return;
+    if (!newTask.title.trim()) return;
 
     const id = crypto.randomUUID();
 
     onAddTask({
       id,
-      title,
-      completed,
+      title: newTask.title,
+      completed: newTask.completed,
     });
 
-    setTitle("");
+    setNewTask((prev) => {
+      prev = {
+        title: "",
+        completed: false,
+      };
+
+      return prev;
+    });
   };
 
   return (
     <Card>
       <form className={style.container} onSubmit={handleSubmit}>
         <span
-          className={`${style.checkbox} ${completed && style.completed}`}
-          onClick={() => setCompleted((prev) => !prev)}
+          className={`${style.checkbox} ${newTask.completed && style.completed}`}
+          onClick={() => setNewTask((prev) => ({ ...prev, completed: !prev.completed }))}
         ></span>
         <input
           className={`${style.input} text-preset-1`}
           id="input"
           type="text"
           placeholder="Create a new todo..."
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          value={newTask.title}
+          onChange={(e) => setNewTask((prev) => ({ ...prev, title: e.target.value }))}
         />
       </form>
     </Card>
