@@ -17,7 +17,9 @@ const TaskItem = ({ task, onToggle, onDelete }: TaskItemProps) => {
       <span className={`${style.title} ${task.completed && style.completed} text-preset-1`}>
         {task.title}
       </span>
-      <span className={style.delete}>X</span>
+      <span className={style.delete} onClick={() => onDelete(task.id)}>
+        X
+      </span>
     </Card>
   );
 };
