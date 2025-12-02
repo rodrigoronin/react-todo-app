@@ -2,6 +2,7 @@ import { useState } from "react";
 import AddTask from "../AddTask/AddTask";
 import TaskItem from "../TaskItem/TaskItem";
 import TaskListFooter from "./components/TaskListFooter";
+import Filter from "../Filter/Filter";
 
 import type { Task } from "../../types/task";
 import style from "./TasksList.module.css";
@@ -40,13 +41,15 @@ const TaskList = () => {
         {filteredTasks.map((task) => (
           <TaskItem key={task.id} task={task} onToggle={onToggle} onDelete={onDelete} />
         ))}
+
         {tasks.length > 0 && (
           <TaskListFooter
             tasksRemaining={getRemainingTasks()}
-            setFilter={setFilterType}
             clearCompleted={() => setTasks((prev) => prev.filter((task) => !task.completed))}
-          />
+          ></TaskListFooter>
         )}
+
+        <Filter setFilter={setFilterType} />
       </div>
     </div>
   );

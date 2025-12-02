@@ -64,7 +64,7 @@ body {
   --primary-color: var(--navy-900);
   --secondary-color: var(--purple-100);
   --tertiary-color: var(--purple-600);
-  --primary-border: var(--purple-800);
+  --primary-border: var(--purple-700);
   --completed-task: var(--purple-700);
   --main-bg: var(--navy-950);
 }

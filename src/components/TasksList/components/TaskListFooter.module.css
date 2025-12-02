@@ -12,13 +12,6 @@
   flex: 1 1 0;
 }
 
-.filter {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 1rem;
-}
-
 .button {
   border: none;
   outline: none;
@@ -29,4 +22,13 @@
 
 .clear-tasks {
   text-align: right;
+}
+
+.desktop-filters {
+  display: none;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
 }

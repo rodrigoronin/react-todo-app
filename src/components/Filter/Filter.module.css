@@ -1,0 +1,26 @@
+.filter-container {
+  margin-top: var(--spacing-300);
+}
+
+.filter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--tertiary-color);
+}
+
+.button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .filter-container {
+    display: none;
+  }
+}

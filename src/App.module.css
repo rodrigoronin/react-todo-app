@@ -3,10 +3,15 @@ body {
 }
 
 .container {
-  width: 540px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: var(--spacing-300);
-  margin: 0 auto;
+  gap: var(--spacing-500);
+}
+
+@media (min-width: 768px) {
+  .container {
+    min-width: 540px;
+  }
 }
