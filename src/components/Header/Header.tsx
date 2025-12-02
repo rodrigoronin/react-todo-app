@@ -6,7 +6,7 @@ interface HeaderProps {
 
 const Header = ({ changeTheme }: HeaderProps) => {
   return (
-    <header className={style.banner}>
+    <header className={style.header}>
       <h1 className={style.title}>TODO</h1>
       <span className={style["theme-icon"]} onClick={changeTheme}>
         Theme
