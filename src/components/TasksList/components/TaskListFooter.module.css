@@ -26,9 +26,10 @@
 
 .desktop-filters {
   display: none;
-  justify-content: center;
-  gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
+  .desktop-filters {
+    display: flex;
+  }
 }

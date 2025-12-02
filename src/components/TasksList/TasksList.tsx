@@ -6,6 +6,7 @@ import Filter from "../Filter/Filter";
 
 import type { Task } from "../../types/task";
 import style from "./TasksList.module.css";
+import Card from "../Card/Card";
 
 const TaskList = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -46,10 +47,16 @@ const TaskList = () => {
           <TaskListFooter
             tasksRemaining={getRemainingTasks()}
             clearCompleted={() => setTasks((prev) => prev.filter((task) => !task.completed))}
-          ></TaskListFooter>
+          >
+            <Filter setFilter={setFilterType} />
+          </TaskListFooter>
         )}
 
-        <Filter setFilter={setFilterType} />
+        <div className={style["filter-container"]}>
+          <Card>
+            <Filter setFilter={setFilterType} />
+          </Card>
+        </div>
       </div>
     </div>
   );

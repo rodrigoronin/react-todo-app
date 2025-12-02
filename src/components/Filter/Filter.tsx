@@ -1,5 +1,3 @@
-import Card from "../Card/Card";
-
 import style from "./Filter.module.css";
 
 interface FilterProps {
@@ -8,32 +6,28 @@ interface FilterProps {
 
 const Filter = ({ setFilter }: FilterProps) => {
   return (
-    <div className={style["filter-container"]}>
-      <Card>
-        <div className={style.filter}>
-          <button
-            type="button"
-            className={`${style.button} text-preset-3`}
-            onClick={() => setFilter("all")}
-          >
-            All
-          </button>
-          <button
-            type="button"
-            className={`${style.button} text-preset-3`}
-            onClick={() => setFilter("active")}
-          >
-            Active
-          </button>
-          <button
-            type="button"
-            className={`${style.button} text-preset-3`}
-            onClick={() => setFilter("completed")}
-          >
-            Completed
-          </button>
-        </div>
-      </Card>
+    <div className={style.filter}>
+      <button
+        type="button"
+        className={`${style.button} text-preset-3`}
+        onClick={() => setFilter("all")}
+      >
+        All
+      </button>
+      <button
+        type="button"
+        className={`${style.button} text-preset-3`}
+        onClick={() => setFilter("active")}
+      >
+        Active
+      </button>
+      <button
+        type="button"
+        className={`${style.button} text-preset-3`}
+        onClick={() => setFilter("completed")}
+      >
+        Completed
+      </button>
     </div>
   );
 };

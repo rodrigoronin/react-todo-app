@@ -3,3 +3,13 @@
   flex-direction: column;
   gap: var(--spacing-300);
 }
+
+.filter-container {
+  margin-top: var(--spacing-300);
+}
+
+@media (min-width: 768px) {
+  .filter-container {
+    display: none;
+  }
+}
