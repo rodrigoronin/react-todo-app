@@ -22,7 +22,3 @@
   border: 1px solid var(--purple-300);
   cursor: pointer;
 }
-
-.completed {
-  background: var(--gradient-1);
-}
