@@ -33,14 +33,7 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
       completed: newTask.completed,
     });
 
-    setNewTask((prev) => {
-      prev = {
-        title: "",
-        completed: false,
-      };
-
-      return prev;
-    });
+    setNewTask(() => ({ title: "", completed: false }));
   };
 
   return (

@@ -5,7 +5,7 @@
   gap: var(--spacing-300);
   padding: var(--spacing-300);
   border-radius: 5px;
-  background: var(--color-white);
+  background: var(--primary-color);
   box-shadow: 0 35px 50px -15px rgba(25, 25, 25, 0.5);
 }
 
@@ -13,6 +13,6 @@
   border: none;
   outline: none;
   background: transparent;
-  color: var(--gray-600);
+  color: var(--tertiary-color);
   font: inherit;
 }

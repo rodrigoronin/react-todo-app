@@ -4,7 +4,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  color: var(--gray-600);
+  color: var(--tertiary-color);
   gap: 1em;
 }
 

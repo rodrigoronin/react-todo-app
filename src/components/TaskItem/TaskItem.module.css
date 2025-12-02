@@ -1,9 +1,9 @@
 .title {
-  color: var(--navy-850);
+  color: var(--secondary-color);
 }
 
 .completed {
-  color: var(--gray-300);
+  color: var(--completed-task);
   text-decoration: line-through;
 }
 
