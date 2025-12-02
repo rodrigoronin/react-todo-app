@@ -10,14 +10,11 @@ body {
   flex-direction: column;
 }
 
-/**
-* VARIABLES
-*/
 :root {
-  --color-white: #fff;
-  --color-black: #000;
+  /* VARIABLES */
+  --white: #fff;
 
-  --purple-100: #3e34f1;
+  --purple-100: #e3e4f1;
   --purple-300: #c8cbe7;
   --purple-600: #5b5e7e;
   --purple-700: #4d5067;
@@ -50,6 +47,26 @@ body {
   --font-bold: 700;
   --font-line-height: 1;
   --font-letter-spacing: -0.25px;
+
+  /* Semantic Light mode variables */
+  --primary-color: var(--white);
+  --secondary-color: var(--navy-850);
+  --tertiary-color: var(--gray-600);
+  --primary-border: var(--purple-300);
+  --completed-task: var(--gray-300);
+  --main-bg: var(--gray-50);
+}
+
+/*
+* DARK THEME
+*/
+:root.dark {
+  --primary-color: var(--navy-900);
+  --secondary-color: var(--purple-100);
+  --tertiary-color: var(--purple-600);
+  --primary-border: var(--purple-800);
+  --completed-task: var(--purple-700);
+  --main-bg: var(--navy-950);
 }
 
 /**

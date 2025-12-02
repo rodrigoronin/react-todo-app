@@ -3,6 +3,7 @@ import Card from "../Card/Card";
 
 import style from "./AddTask.module.css";
 import type { Task } from "../../types/task";
+import Checkbox from "../Checkbox/Checkbox";
 
 interface AddTaskProps {
   onAddTask: (task: Task) => void;
@@ -32,23 +33,16 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
       completed: newTask.completed,
     });
 
-    setNewTask((prev) => {
-      prev = {
-        title: "",
-        completed: false,
-      };
-
-      return prev;
-    });
+    setNewTask(() => ({ title: "", completed: false }));
   };
 
   return (
     <Card>
       <form className={style.container} onSubmit={handleSubmit}>
-        <span
-          className={`${style.checkbox} ${newTask.completed && style.completed}`}
-          onClick={() => setNewTask((prev) => ({ ...prev, completed: !prev.completed }))}
-        ></span>
+        <Checkbox
+          completed={newTask.completed}
+          onChange={() => setNewTask((prev) => ({ ...prev, completed: !prev.completed }))}
+        />
         <input
           className={`${style.input} text-preset-1`}
           id="input"

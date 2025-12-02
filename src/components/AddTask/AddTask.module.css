@@ -10,19 +10,6 @@
   border: none;
   outline: none;
   background: transparent;
-  color: var(--gray-600);
+  color: var(--tertiary-color);
   font: inherit;
-}
-
-.checkbox {
-  display: inline-block;
-  width: var(--spacing-300);
-  height: var(--spacing-300);
-  border-radius: 50%;
-  border: 1px solid var(--purple-300);
-  cursor: pointer;
-}
-
-.completed {
-  background: var(--gradient-1);
 }

@@ -1,0 +1,15 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -12rem;
+  color: var(--white);
+}
+
+.title {
+  letter-spacing: var(--spacing-200);
+}
+
+.theme-icon {
+  cursor: pointer;
+}
