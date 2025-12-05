@@ -7,6 +7,14 @@
   cursor: pointer;
 }
 
+.checkbox:hover:not(.completed) {
+  background: linear-gradient(var(--primary-color) 0 0) padding-box, var(--gradient-1) border-box;
+  color: #313149;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 .completed {
   background: var(--gradient-1);
 }
