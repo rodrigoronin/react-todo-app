@@ -1,5 +1,10 @@
 .title {
   color: var(--secondary-color);
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  flex: 1;
+  max-width: 200px;
 }
 
 .completed {
@@ -10,4 +15,10 @@
 .delete {
   margin-left: auto;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .title {
+    max-width: 400px;
+  }
 }

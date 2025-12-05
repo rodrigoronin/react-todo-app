@@ -13,4 +13,14 @@
   background: transparent;
   cursor: pointer;
   color: inherit;
+
+  transition: 0.2s linear;
+}
+
+.button:hover {
+  color: var(--secondary-color);
+}
+
+.active {
+  color: var(--filter-active);
 }

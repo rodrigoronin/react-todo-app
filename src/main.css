@@ -3,6 +3,13 @@ html,
 body {
   margin: 0;
   padding: 0;
+
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  transition: background 0.5s linear;
 }
 
 .main {
@@ -55,6 +62,7 @@ body {
   --primary-border: var(--purple-300);
   --completed-task: var(--gray-300);
   --main-bg: var(--gray-50);
+  --filter-active: var(--blue-500);
 }
 
 /*
@@ -85,6 +93,7 @@ body {
   font-weight: var(--font-regular);
   line-height: var(--font-line-height);
   letter-spacing: var(--font-letter-spacing);
+  font-weight: 700;
 }
 
 .text-preset-3 {

@@ -48,13 +48,13 @@ const TaskList = () => {
             tasksRemaining={getRemainingTasks()}
             clearCompleted={() => setTasks((prev) => prev.filter((task) => !task.completed))}
           >
-            <Filter setFilter={setFilterType} />
+            <Filter setFilter={setFilterType} active={filterType} />
           </TaskListFooter>
         )}
 
         <div className={style["filter-container"]}>
           <Card>
-            <Filter setFilter={setFilterType} />
+            <Filter setFilter={setFilterType} active={filterType} />
           </Card>
         </div>
       </div>

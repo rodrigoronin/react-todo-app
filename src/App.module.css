@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-  margin: 0 auto;
+  padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,6 +12,7 @@ body {
 
 @media (min-width: 768px) {
   .container {
+    margin: 0 auto;
     min-width: 540px;
   }
 }

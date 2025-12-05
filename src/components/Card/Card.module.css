@@ -8,11 +8,3 @@
   background: var(--primary-color);
   box-shadow: 0 35px 50px -15px rgba(25, 25, 25, 0.5);
 }
-
-.input {
-  border: none;
-  outline: none;
-  background: transparent;
-  color: var(--tertiary-color);
-  font: inherit;
-}
