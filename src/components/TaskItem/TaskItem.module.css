@@ -4,6 +4,8 @@
   overflow-wrap: anywhere;
   white-space: normal;
   flex: 1;
+
+  cursor: pointer;
 }
 
 .completed {
@@ -12,7 +14,15 @@
 }
 
 .delete {
+  display: flex;
+  align-items: center;
   margin-left: auto;
+  cursor: pointer;
+}
+
+.dragHandle {
+  color: var(--secondary-color);
+  font-size: var(--font-size-4);
   cursor: pointer;
 }
 

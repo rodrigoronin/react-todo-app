@@ -10,6 +10,11 @@ body {
   gap: var(--spacing-500);
 }
 
+.reorder-hint {
+  color: var(--tertiary-color);
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .container {
     margin: 0 auto;

@@ -8,6 +8,8 @@ interface CheckboxProps {
   onChange?: () => void;
 }
 
+// onChange to check/uncheck on creation (taskId doesn't exist)
+// onToggle to check/uncheck after creation
 const Checkbox = ({ completed = false, taskId, onToggle, onChange }: CheckboxProps) => {
   return (
     <span
