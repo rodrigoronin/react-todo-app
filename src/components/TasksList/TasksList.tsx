@@ -5,7 +5,14 @@ import TaskItem from "../TaskItem/TaskItem";
 import TaskListFooter from "./components/TaskListFooter";
 import Filter from "../Filter/Filter";
 import Card from "../Card/Card";
-import { DndContext, type DragEndEvent } from "@dnd-kit/core";
+import {
+  DndContext,
+  MouseSensor,
+  TouchSensor,
+  useSensor,
+  useSensors,
+  type DragEndEvent,
+} from "@dnd-kit/core";
 
 import style from "./TasksList.module.css";
 import { SortableContext } from "@dnd-kit/sortable";
@@ -13,6 +20,15 @@ import { SortableContext } from "@dnd-kit/sortable";
 const TaskList = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [filterType, setFilterType] = useState<string>("all");
+
+  const sensors = useSensors(
+    useSensor(MouseSensor, {
+      activationConstraint: { distance: 5 },
+    }),
+    useSensor(TouchSensor, {
+      activationConstraint: { delay: 150, tolerance: 5 },
+    })
+  );
 
   function getRemainingTasks(): number {
     return tasks.filter((task) => !task.completed).length;
@@ -60,7 +76,7 @@ const TaskList = () => {
     <>
       <AddTask onAddTask={onAddTask} />
       <div className={style.container}>
-        <DndContext onDragEnd={handleDragEnd}>
+        <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
           <SortableContext items={tasks}>
             <div>
               {filteredTasks.map((task) => (
