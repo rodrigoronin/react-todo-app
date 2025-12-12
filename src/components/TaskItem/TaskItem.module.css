@@ -24,6 +24,7 @@
   color: var(--secondary-color);
   font-size: var(--font-size-4);
   cursor: pointer;
+  touch-action: none;
 }
 
 @media (min-width: 768px) {

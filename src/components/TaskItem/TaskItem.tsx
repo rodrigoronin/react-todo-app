@@ -22,6 +22,7 @@ const TaskItem = ({ task, onToggle, onDelete }: TaskItemProps) => {
   });
   const dragStyle = transform
     ? {
+        willChange: "transform",
         transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
       }
     : undefined;
