@@ -1,8 +1,9 @@
 .container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: left;
-  gap: var(--spacing-300);
+  gap: var(--spacing-200);
   background: transparent;
 }
 
@@ -12,4 +13,11 @@
   background: transparent;
   color: var(--tertiary-color);
   font: inherit;
+}
+
+.button-submit {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }

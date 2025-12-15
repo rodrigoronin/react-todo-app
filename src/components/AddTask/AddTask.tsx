@@ -1,9 +1,10 @@
 import { useState, type FormEvent } from "react";
 import Card from "../Card/Card";
-
-import style from "./AddTask.module.css";
 import type { Task } from "../../types/task";
 import Checkbox from "../Checkbox/Checkbox";
+
+import style from "./AddTask.module.css";
+import newTaskIcon from "../../assets/new_task.svg";
 
 interface AddTaskProps {
   onAddTask: (task: Task) => void;
@@ -51,6 +52,12 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
           value={newTask.title}
           onChange={(e) => setNewTask((prev) => ({ ...prev, title: e.target.value }))}
         />
+        <button className={style["button-submit"]} type="submit">
+          <svg width={20} height={20}>
+            <rect width="100%" height="100%" fill="transparent" />
+            <image href={newTaskIcon} width={20} height={20} />
+          </svg>
+        </button>
       </form>
     </Card>
   );

@@ -1,8 +1,8 @@
 .container {
   display: flex;
   align-items: center;
-  gap: var(--spacing-300);
-  padding: var(--spacing-300);
+  gap: var(--spacing-200);
+  padding: var(--spacing-300) var(--spacing-200);
   border-radius: 5px;
   background: var(--primary-color);
   box-shadow: 0 35px 50px -15px rgba(25, 25, 25, 0.5);
