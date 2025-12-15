@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  gap: var(--spacing-300);
+  gap: var(--spacing-200);
   background: transparent;
 }
 

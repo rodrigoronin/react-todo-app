@@ -53,9 +53,9 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
           onChange={(e) => setNewTask((prev) => ({ ...prev, title: e.target.value }))}
         />
         <button className={style["button-submit"]} type="submit">
-          <svg width={24} height={24}>
+          <svg width={20} height={20}>
             <rect width="100%" height="100%" fill="transparent" />
-            <image href={newTaskIcon} width={24} height={24} />
+            <image href={newTaskIcon} width={20} height={20} />
           </svg>
         </button>
       </form>
